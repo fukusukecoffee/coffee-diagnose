@@ -1,11 +1,12 @@
 # Tables
-User - has_many questions
+User - many users have_many answers
 nickname string
 age string
 gender string
 
 Question - has_many answers
-question string 
+question string
+image string
 
 Answer - belongs_to question
 answer string 
