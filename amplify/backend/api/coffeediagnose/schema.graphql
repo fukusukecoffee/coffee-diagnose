@@ -8,7 +8,7 @@ type Question @model @auth(rules: [{allow: public}]) {
   id: ID!
   question: String
   Answers: [Answer] @hasMany(indexName: "byQuestion", fields: ["id"])
-  userID: ID! @index(name: "byUser")
+  users: [User] @manyToMany(relationName: "UserQuestion")
 }
 
 type User @model @auth(rules: [{allow: public}]) {
@@ -16,6 +16,5 @@ type User @model @auth(rules: [{allow: public}]) {
   nickname: String
   age: String
   gender: String!
-  Questions: [Question] @hasMany(indexName: "byUser", fields: ["id"])
+  Questions: [Question] @manyToMany(relationName: "UserQuestion")
 }
- 

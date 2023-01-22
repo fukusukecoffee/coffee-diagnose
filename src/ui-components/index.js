@@ -18,5 +18,7 @@ export { default as ComicLightlargeBase } from "./ComicLightlargeBase";
 export { default as SelectButton } from "./SelectButton";
 export { default as Pinkcup } from "./Pinkcup";
 export { default as studioTheme } from "./studioTheme";
+export { default as QuestionCreateForm } from "./QuestionCreateForm";
+export { default as QuestionUpdateForm } from "./QuestionUpdateForm";
 export { default as UserCreateForm } from "./UserCreateForm";
 export { default as UserUpdateForm } from "./UserUpdateForm";

@@ -1,6 +1,6 @@
 import { ModelInit, MutableModel, __modelMeta__, ManagedIdentifier } from "@aws-amplify/datastore";
 // @ts-ignore
-import { LazyLoading, LazyLoadingDisabled, AsyncCollection } from "@aws-amplify/datastore";
+import { LazyLoading, LazyLoadingDisabled, AsyncCollection, AsyncItem } from "@aws-amplify/datastore";
 
 
 
@@ -44,7 +44,7 @@ type EagerQuestion = {
   readonly id: string;
   readonly question?: string | null;
   readonly Answers?: (Answer | null)[] | null;
-  readonly userID: string;
+  readonly users?: (UserQuestion | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -57,7 +57,7 @@ type LazyQuestion = {
   readonly id: string;
   readonly question?: string | null;
   readonly Answers: AsyncCollection<Answer>;
-  readonly userID: string;
+  readonly users: AsyncCollection<UserQuestion>;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -77,7 +77,7 @@ type EagerUser = {
   readonly nickname?: string | null;
   readonly age?: string | null;
   readonly gender: string;
-  readonly Questions?: (Question | null)[] | null;
+  readonly Questions?: (UserQuestion | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -91,7 +91,7 @@ type LazyUser = {
   readonly nickname?: string | null;
   readonly age?: string | null;
   readonly gender: string;
-  readonly Questions: AsyncCollection<Question>;
+  readonly Questions: AsyncCollection<UserQuestion>;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -100,4 +100,38 @@ export declare type User = LazyLoading extends LazyLoadingDisabled ? EagerUser :
 
 export declare const User: (new (init: ModelInit<User>) => User) & {
   copyOf(source: User, mutator: (draft: MutableModel<User>) => MutableModel<User> | void): User;
+}
+
+type EagerUserQuestion = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<UserQuestion, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly questionId?: string | null;
+  readonly userId?: string | null;
+  readonly question: Question;
+  readonly user: User;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazyUserQuestion = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<UserQuestion, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly questionId?: string | null;
+  readonly userId?: string | null;
+  readonly question: AsyncItem<Question>;
+  readonly user: AsyncItem<User>;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type UserQuestion = LazyLoading extends LazyLoadingDisabled ? EagerUserQuestion : LazyUserQuestion
+
+export declare const UserQuestion: (new (init: ModelInit<UserQuestion>) => UserQuestion) & {
+  copyOf(source: UserQuestion, mutator: (draft: MutableModel<UserQuestion>) => MutableModel<UserQuestion> | void): UserQuestion;
 }
