@@ -14,7 +14,7 @@ import { DataStore } from "aws-amplify";
 export default function QuestionUpdateForm(props) {
   const {
     id: idProp,
-    question,
+    // question,
     onSuccess,
     onError,
     onSubmit,
