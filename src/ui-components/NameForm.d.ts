@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { User } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { IconProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -15,6 +16,8 @@ export declare type NameFormOverridesProps = {
     "\u304A\u540D\u524D"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type NameFormProps = React.PropsWithChildren<Partial<ViewProps> & {
+    user?: User;
+} & {
     overrides?: NameFormOverridesProps | undefined | null;
 }>;
 export default function NameForm(props: NameFormProps): React.ReactElement;

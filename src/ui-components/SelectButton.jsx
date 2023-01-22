@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function SelectButton(props) {
-  const { overrides, ...rest } = props;
+  const { user, overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
@@ -57,7 +57,7 @@ export default function SelectButton(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Get it"
+          children={user?.gender}
           {...getOverrideProps(overrides, "Get it")}
         ></Text>
       </Flex>

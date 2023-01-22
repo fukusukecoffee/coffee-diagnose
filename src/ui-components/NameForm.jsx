@@ -9,7 +9,7 @@ import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Icon, Text, View } from "@aws-amplify/ui-react";
 export default function NameForm(props) {
-  const { overrides, ...rest } = props;
+  const { user, overrides, ...rest } = props;
   return (
     <View
       width="342px"
@@ -67,7 +67,7 @@ export default function NameForm(props) {
         right="8.77%"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="みうらふくすけ"
+        children={user?.nickname}
         {...getOverrideProps(
           overrides,
           "\u307F\u3046\u3089\u3075\u304F\u3059\u3051"
