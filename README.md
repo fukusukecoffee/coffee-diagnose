@@ -1,5 +1,5 @@
 # Tables
-User - has_many quesrions
+User - has_many questions
 nickname string
 age string
 gender string
