@@ -1,0 +1,21 @@
+type Answer @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  answer: String
+  questionID: ID! @index(name: "byQuestion")
+}
+
+type Question @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  question: String
+  Answers: [Answer] @hasMany(indexName: "byQuestion", fields: ["id"])
+  userID: ID! @index(name: "byUser")
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  nickname: String
+  age: String
+  gender: String!
+  Questions: [Question] @hasMany(indexName: "byUser", fields: ["id"])
+}
+ 

@@ -24,7 +24,7 @@ export default function Qdata(props) {
       {...rest}
     >
       <Text
-        fontFamily="Inter"
+        fontFamily="Noto Sans JP"
         fontSize="16px"
         fontWeight="700"
         color="rgba(0,0,0,1)"
