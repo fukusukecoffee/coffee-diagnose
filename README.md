@@ -1,3 +1,15 @@
+# Tables
+User - has_many quesrions
+nickname string
+age string
+gender string
+
+Question - has_many answers
+question string 
+
+Answer - belongs_to question
+answer string 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
