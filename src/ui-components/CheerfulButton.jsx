@@ -13,7 +13,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function CheerfulButton(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const { answer, overrides: overridesProp, ...rest } = props;
   const variants = [
     {
       overrides: { "Give it a try": {}, Button: {}, CheerfulButton: {} },
@@ -74,7 +74,7 @@ export default function CheerfulButton(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="はい、よく知っています。"
+          children={answer?.answer}
           {...getOverrideProps(overrides, "Give it a try")}
         ></Text>
       </Flex>

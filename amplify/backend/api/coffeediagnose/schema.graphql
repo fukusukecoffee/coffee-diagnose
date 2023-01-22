@@ -2,13 +2,13 @@ type Answer @model @auth(rules: [{allow: public}]) {
   id: ID!
   answer: String
   questionID: ID! @index(name: "byQuestion")
+  users: [User] @manyToMany(relationName: "UserAnswer")
 }
 
 type Question @model @auth(rules: [{allow: public}]) {
   id: ID!
   question: String
   Answers: [Answer] @hasMany(indexName: "byQuestion", fields: ["id"])
-  users: [User] @manyToMany(relationName: "UserQuestion")
 }
 
 type User @model @auth(rules: [{allow: public}]) {
@@ -16,5 +16,6 @@ type User @model @auth(rules: [{allow: public}]) {
   nickname: String
   age: String
   gender: String!
-  Questions: [Question] @manyToMany(relationName: "UserQuestion")
+  Answers: [Answer] @manyToMany(relationName: "UserAnswer")
 }
+ 

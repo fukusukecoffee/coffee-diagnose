@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Answer } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
@@ -14,6 +15,8 @@ export declare type CheerfulButtonOverridesProps = {
     "Give it a try"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
 export declare type CheerfulButtonProps = React.PropsWithChildren<Partial<FlexProps> & {
+    answer?: Answer;
+} & {
     hover?: "false";
 } & {
     overrides?: CheerfulButtonOverridesProps | undefined | null;
