@@ -8,7 +8,6 @@ type Questionare @model @auth(rules: [{allow: public}]) {
 type Answer @model @auth(rules: [{allow: public}]) {
   id: ID!
   answer: String!
-  questionID: ID @index(name: "byQuestion")
   users: [User] @manyToMany(relationName: "UserAnswer")
   questionareID: ID! @index(name: "byQuestionare")
 }
