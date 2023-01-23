@@ -30,13 +30,8 @@ function Home() {
   );
 }
 
-function Person() {
-  return <h2>あなたについて教えてください。</h2>;
-}
 
-function Question1() {
-  return <h2>質問１：</h2>;
-}
+
 
 function Result() {
   return <h2>あなたにおすすめのコーヒーは・・・</h2>;
