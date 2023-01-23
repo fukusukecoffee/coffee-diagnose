@@ -45,7 +45,6 @@ type EagerAnswer = {
   };
   readonly id: string;
   readonly answer: string;
-  readonly questionID?: string | null;
   readonly users?: (UserAnswer | null)[] | null;
   readonly questionareID: string;
   readonly createdAt?: string | null;
@@ -59,7 +58,6 @@ type LazyAnswer = {
   };
   readonly id: string;
   readonly answer: string;
-  readonly questionID?: string | null;
   readonly users: AsyncCollection<UserAnswer>;
   readonly questionareID: string;
   readonly createdAt?: string | null;

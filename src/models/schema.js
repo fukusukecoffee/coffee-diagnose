@@ -99,13 +99,6 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "questionID": {
-                    "name": "questionID",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": false,
-                    "attributes": []
-                },
                 "users": {
                     "name": "users",
                     "isArray": true,
@@ -152,15 +145,6 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byQuestion",
-                        "fields": [
-                            "questionID"
-                        ]
-                    }
                 },
                 {
                     "type": "key",
@@ -380,5 +364,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.3.5",
-    "version": "a0cec68728f6cebf67e2613252cab381"
+    "version": "bbd2461748c20026b71f6c9d7cf380a6"
 };
