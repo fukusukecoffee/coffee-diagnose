@@ -7,15 +7,15 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Text, View } from "@aws-amplify/ui-react";
-export default function ComicLightlargeBase(props) {
+import { Flex, Text } from "@aws-amplify/ui-react";
+export default function StartButton(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
       gap="0"
       direction="column"
-      width="unset"
-      height="unset"
+      width="256px"
+      height="61px"
       justifyContent="flex-start"
       alignItems="flex-start"
       position="relative"
@@ -24,7 +24,7 @@ export default function ComicLightlargeBase(props) {
       borderRadius="8px"
       padding="14px 30px 14px 30px"
       backgroundColor="rgba(255,255,255,1)"
-      {...getOverrideProps(overrides, "ComicLightlargeBase")}
+      {...getOverrideProps(overrides, "StartButton")}
       {...rest}
     >
       <Flex
@@ -32,8 +32,8 @@ export default function ComicLightlargeBase(props) {
         direction="row"
         width="unset"
         height="unset"
-        justifyContent="flex-start"
-        alignItems="flex-start"
+        justifyContent="center"
+        alignItems="center"
         overflow="hidden"
         shrink="0"
         alignSelf="stretch"
@@ -43,7 +43,7 @@ export default function ComicLightlargeBase(props) {
       >
         <Text
           fontFamily="Inter"
-          fontSize="24px"
+          fontSize="16px"
           fontWeight="700"
           color="rgba(0,0,0,1)"
           lineHeight="32px"
@@ -59,10 +59,9 @@ export default function ComicLightlargeBase(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="BUTTON"
+          children="コーヒー診断をはじめる"
           {...getOverrideProps(overrides, "BUTTON")}
         ></Text>
-        <View {...getOverrideProps(overrides, "Icon / large")}></View>
       </Flex>
     </Flex>
   );

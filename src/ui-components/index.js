@@ -4,6 +4,7 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
+export { default as StartButton } from "./StartButton";
 export { default as NextButton } from "./NextButton";
 export { default as Socialmediacardframe } from "./Socialmediacardframe";
 export { default as GenderButtonCollection } from "./GenderButtonCollection";

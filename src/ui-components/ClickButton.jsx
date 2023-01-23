@@ -10,7 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import ComicLightlargeBase from "./ComicLightlargeBase";
 import { Flex } from "@aws-amplify/ui-react";
 export default function ClickButton(props) {
-  const { overrides, ...rest } = props;
+  const { message, overrides, ...rest } = props;
   return (
     <Flex
       gap="10px"
@@ -31,7 +31,7 @@ export default function ClickButton(props) {
         width="256px"
         height="61px"
         justifyContent="flex-start"
-        alignItems="flex-start"
+        alignItems={message}
         shrink="0"
         position="relative"
         border="2px SOLID rgba(0,0,0,1)"

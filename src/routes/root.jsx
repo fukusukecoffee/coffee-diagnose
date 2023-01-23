@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../App.css";
 
-import {ClickButton, Title} from '../ui-components'
+import {StartButton, Title} from '../ui-components'
 import ComicLightlargeBase from '../ui-components/ComicLightlargeBase';
 import { Container, NavbarBrand, Navbar, Button } from 'react-bootstrap';
 import { Link } from "react-router-dom";
@@ -20,7 +20,8 @@ export default function Root() {
         <Container>
             <img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/pink-cup.png" alt="coffee-cup" />
             <div className="p-4"><center><Title /></center></div>
-            <Link to={`que`}><center><ClickButton></ClickButton></center></Link>
+            <Link to={`que`}><center><StartButton/></center></Link>
+            {/* <p className="p-4">診断せずにコーヒーを選ぶ</p> */}
         </Container>
         </div>
     </div>
