@@ -8,10 +8,10 @@
 import * as React from "react";
 import { Button, Flex, Grid, TextField } from "@aws-amplify/ui-react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { User } from "../models";
+import { Questionare } from "../models";
 import { fetchByPath, validateField } from "./utils";
 import { DataStore } from "aws-amplify";
-export default function UserCreateForm(props) {
+export default function QuestionareCreateForm(props) {
   const {
     clearOnSuccess = true,
     onSuccess,
@@ -23,24 +23,20 @@ export default function UserCreateForm(props) {
     ...rest
   } = props;
   const initialValues = {
-    nickname: "",
-    age: "",
-    gender: "",
+    asking: "",
+    image: "",
   };
-  const [nickname, setNickname] = React.useState(initialValues.nickname);
-  const [age, setAge] = React.useState(initialValues.age);
-  const [gender, setGender] = React.useState(initialValues.gender);
+  const [asking, setAsking] = React.useState(initialValues.asking);
+  const [image, setImage] = React.useState(initialValues.image);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
-    setNickname(initialValues.nickname);
-    setAge(initialValues.age);
-    setGender(initialValues.gender);
+    setAsking(initialValues.asking);
+    setImage(initialValues.image);
     setErrors({});
   };
   const validations = {
-    nickname: [{ type: "Required" }],
-    age: [{ type: "Required" }],
-    gender: [{ type: "Required" }],
+    asking: [{ type: "Required" }],
+    image: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -67,9 +63,8 @@ export default function UserCreateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
-          nickname,
-          age,
-          gender,
+          asking,
+          image,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -99,7 +94,7 @@ export default function UserCreateForm(props) {
               modelFields[key] = undefined;
             }
           });
-          await DataStore.save(new User(modelFields));
+          await DataStore.save(new Questionare(modelFields));
           if (onSuccess) {
             onSuccess(modelFields);
           }
@@ -112,86 +107,58 @@ export default function UserCreateForm(props) {
           }
         }
       }}
-      {...getOverrideProps(overrides, "UserCreateForm")}
+      {...getOverrideProps(overrides, "QuestionareCreateForm")}
       {...rest}
     >
       <TextField
-        label="Nickname"
+        label="Asking"
         isRequired={true}
         isReadOnly={false}
-        value={nickname}
+        value={asking}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              nickname: value,
-              age,
-              gender,
+              asking: value,
+              image,
             };
             const result = onChange(modelFields);
-            value = result?.nickname ?? value;
+            value = result?.asking ?? value;
           }
-          if (errors.nickname?.hasError) {
-            runValidationTasks("nickname", value);
+          if (errors.asking?.hasError) {
+            runValidationTasks("asking", value);
           }
-          setNickname(value);
+          setAsking(value);
         }}
-        onBlur={() => runValidationTasks("nickname", nickname)}
-        errorMessage={errors.nickname?.errorMessage}
-        hasError={errors.nickname?.hasError}
-        {...getOverrideProps(overrides, "nickname")}
+        onBlur={() => runValidationTasks("asking", asking)}
+        errorMessage={errors.asking?.errorMessage}
+        hasError={errors.asking?.hasError}
+        {...getOverrideProps(overrides, "asking")}
       ></TextField>
       <TextField
-        label="Age"
-        isRequired={true}
+        label="Image"
+        isRequired={false}
         isReadOnly={false}
-        value={age}
+        value={image}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              nickname,
-              age: value,
-              gender,
+              asking,
+              image: value,
             };
             const result = onChange(modelFields);
-            value = result?.age ?? value;
+            value = result?.image ?? value;
           }
-          if (errors.age?.hasError) {
-            runValidationTasks("age", value);
+          if (errors.image?.hasError) {
+            runValidationTasks("image", value);
           }
-          setAge(value);
+          setImage(value);
         }}
-        onBlur={() => runValidationTasks("age", age)}
-        errorMessage={errors.age?.errorMessage}
-        hasError={errors.age?.hasError}
-        {...getOverrideProps(overrides, "age")}
-      ></TextField>
-      <TextField
-        label="Gender"
-        isRequired={true}
-        isReadOnly={false}
-        value={gender}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
-              nickname,
-              age,
-              gender: value,
-            };
-            const result = onChange(modelFields);
-            value = result?.gender ?? value;
-          }
-          if (errors.gender?.hasError) {
-            runValidationTasks("gender", value);
-          }
-          setGender(value);
-        }}
-        onBlur={() => runValidationTasks("gender", gender)}
-        errorMessage={errors.gender?.errorMessage}
-        hasError={errors.gender?.hasError}
-        {...getOverrideProps(overrides, "gender")}
+        onBlur={() => runValidationTasks("image", image)}
+        errorMessage={errors.image?.errorMessage}
+        hasError={errors.image?.hasError}
+        {...getOverrideProps(overrides, "image")}
       ></TextField>
       <Flex
         justifyContent="space-between"

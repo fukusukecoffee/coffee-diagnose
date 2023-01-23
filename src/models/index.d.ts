@@ -6,15 +6,48 @@ import { LazyLoading, LazyLoadingDisabled, AsyncCollection, AsyncItem } from "@a
 
 
 
+type EagerQuestionare = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Questionare, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly asking: string;
+  readonly Answers?: (Answer | null)[] | null;
+  readonly image?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+type LazyQuestionare = {
+  readonly [__modelMeta__]: {
+    identifier: ManagedIdentifier<Questionare, 'id'>;
+    readOnlyFields: 'createdAt' | 'updatedAt';
+  };
+  readonly id: string;
+  readonly asking: string;
+  readonly Answers: AsyncCollection<Answer>;
+  readonly image?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+}
+
+export declare type Questionare = LazyLoading extends LazyLoadingDisabled ? EagerQuestionare : LazyQuestionare
+
+export declare const Questionare: (new (init: ModelInit<Questionare>) => Questionare) & {
+  copyOf(source: Questionare, mutator: (draft: MutableModel<Questionare>) => MutableModel<Questionare> | void): Questionare;
+}
+
 type EagerAnswer = {
   readonly [__modelMeta__]: {
     identifier: ManagedIdentifier<Answer, 'id'>;
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly answer?: string | null;
-  readonly questionID: string;
+  readonly answer: string;
+  readonly questionID?: string | null;
   readonly users?: (UserAnswer | null)[] | null;
+  readonly questionareID: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -25,9 +58,10 @@ type LazyAnswer = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly answer?: string | null;
-  readonly questionID: string;
+  readonly answer: string;
+  readonly questionID?: string | null;
   readonly users: AsyncCollection<UserAnswer>;
+  readonly questionareID: string;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -44,8 +78,8 @@ type EagerUser = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly nickname?: string | null;
-  readonly age?: string | null;
+  readonly nickname: string;
+  readonly age: string;
   readonly gender: string;
   readonly Answers?: (UserAnswer | null)[] | null;
   readonly createdAt?: string | null;
@@ -58,8 +92,8 @@ type LazyUser = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly nickname?: string | null;
-  readonly age?: string | null;
+  readonly nickname: string;
+  readonly age: string;
   readonly gender: string;
   readonly Answers: AsyncCollection<UserAnswer>;
   readonly createdAt?: string | null;
@@ -70,36 +104,6 @@ export declare type User = LazyLoading extends LazyLoadingDisabled ? EagerUser :
 
 export declare const User: (new (init: ModelInit<User>) => User) & {
   copyOf(source: User, mutator: (draft: MutableModel<User>) => MutableModel<User> | void): User;
-}
-
-type EagerQuestion = {
-  readonly [__modelMeta__]: {
-    identifier: ManagedIdentifier<Question, 'id'>;
-    readOnlyFields: 'createdAt' | 'updatedAt';
-  };
-  readonly id: string;
-  readonly question?: string | null;
-  readonly Answers?: (Answer | null)[] | null;
-  readonly createdAt?: string | null;
-  readonly updatedAt?: string | null;
-}
-
-type LazyQuestion = {
-  readonly [__modelMeta__]: {
-    identifier: ManagedIdentifier<Question, 'id'>;
-    readOnlyFields: 'createdAt' | 'updatedAt';
-  };
-  readonly id: string;
-  readonly question?: string | null;
-  readonly Answers: AsyncCollection<Answer>;
-  readonly createdAt?: string | null;
-  readonly updatedAt?: string | null;
-}
-
-export declare type Question = LazyLoading extends LazyLoadingDisabled ? EagerQuestion : LazyQuestion
-
-export declare const Question: (new (init: ModelInit<Question>) => Question) & {
-  copyOf(source: Question, mutator: (draft: MutableModel<Question>) => MutableModel<Question> | void): Question;
 }
 
 type EagerUserAnswer = {

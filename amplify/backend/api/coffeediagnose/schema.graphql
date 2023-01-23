@@ -1,20 +1,22 @@
-type Answer @model @auth(rules: [{allow: public}]) {
+type Questionare @model @auth(rules: [{allow: public}]) {
   id: ID!
-  answer: String
-  questionID: ID! @index(name: "byQuestion")
-  users: [User] @manyToMany(relationName: "UserAnswer")
+  asking: String!
+  Answers: [Answer] @hasMany(indexName: "byQuestionare", fields: ["id"])
+  image: String
 }
 
-type Question @model @auth(rules: [{allow: public}]) {
+type Answer @model @auth(rules: [{allow: public}]) {
   id: ID!
-  question: String
-  Answers: [Answer] @hasMany(indexName: "byQuestion", fields: ["id"])
+  answer: String!
+  questionID: ID @index(name: "byQuestion")
+  users: [User] @manyToMany(relationName: "UserAnswer")
+  questionareID: ID! @index(name: "byQuestionare")
 }
 
 type User @model @auth(rules: [{allow: public}]) {
   id: ID!
-  nickname: String
-  age: String
+  nickname: String!
+  age: String!
   gender: String!
   Answers: [Answer] @manyToMany(relationName: "UserAnswer")
 }
