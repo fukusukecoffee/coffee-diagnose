@@ -4,8 +4,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import "./index.css";
+import { AmplifyProvider } from '@aws-amplify/ui-react';
 import Root from "./routes/root";
+import Que from "./routes/que";
 
 
 const router = createBrowserRouter([
@@ -13,10 +14,16 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
   },
+  {
+    path: "que",
+    element: <Que />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AmplifyProvider>
+        <RouterProvider router={router} />
+    </AmplifyProvider>
   </React.StrictMode>
 );

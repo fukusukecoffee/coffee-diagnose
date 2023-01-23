@@ -5,9 +5,8 @@ import "../App.css";
 import {ClickButton, Title} from '../ui-components'
 import ComicLightlargeBase from '../ui-components/ComicLightlargeBase';
 import { Container, NavbarBrand, Navbar, Button } from 'react-bootstrap';
-import { Link } from "react-router-dom";
 
-export default function Root() {
+export default function que() {
     return (
       <>
     <div className="App">
@@ -17,12 +16,8 @@ export default function Root() {
         </NavbarBrand>
       </Navbar>
       <div className="App-header">
-        <Container>
-            <img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/pink-cup.png" alt="coffee-cup" />
-            <div className="p-4"><center><Title /></center></div>
-            <Link to={`que`}><center><ClickButton></ClickButton></center></Link>
-        </Container>
-        </div>
+
+      </div>
     </div>
       </>
     );

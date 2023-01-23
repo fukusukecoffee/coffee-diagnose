@@ -13,6 +13,10 @@
   color: black;
 }
 
+a {
+  text-decoration: none;
+}
+
 .App-link {
   color: #61dafb;
 }

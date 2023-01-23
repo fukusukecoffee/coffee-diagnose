@@ -59,7 +59,7 @@ export default function ComicLightlargeBase(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="BUTTON"
+          children="診断をはじめる▶"
           {...getOverrideProps(overrides, "BUTTON")}
         ></Text>
         <View {...getOverrideProps(overrides, "Icon / large")}></View>
