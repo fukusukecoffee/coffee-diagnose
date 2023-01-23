@@ -6,16 +6,14 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ComicLightlargeBaseProps } from "./ComicLightlargeBase";
-import { FlexProps } from "@aws-amplify/ui-react";
+import { FlexProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type ClickButtonOverridesProps = {
-    ClickButton?: PrimitiveOverrideProps<FlexProps>;
-    Base?: ComicLightlargeBaseProps;
+export declare type StartButtonOverridesProps = {
+    StartButton?: PrimitiveOverrideProps<FlexProps>;
+    Content?: PrimitiveOverrideProps<FlexProps>;
+    BUTTON?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
-export declare type ClickButtonProps = React.PropsWithChildren<Partial<FlexProps> & {
-    message?: String;
-} & {
-    overrides?: ClickButtonOverridesProps | undefined | null;
+export declare type StartButtonProps = React.PropsWithChildren<Partial<FlexProps> & {
+    overrides?: StartButtonOverridesProps | undefined | null;
 }>;
-export default function ClickButton(props: ClickButtonProps): React.ReactElement;
+export default function StartButton(props: StartButtonProps): React.ReactElement;
