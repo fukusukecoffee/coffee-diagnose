@@ -4,9 +4,7 @@ import "../App.css";
 import { Container, NavbarBrand, Navbar} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 import Title from '../ui-components/Title';
-import { 
-  StartButton 
-} from '../ui-components';
+import { StartButton } from '../ui-components';
 
 
 export default function Root() {
