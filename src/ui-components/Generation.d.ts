@@ -6,14 +6,13 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps, TextProps } from "@aws-amplify/ui-react";
+import { TextProps, ViewProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type SelectButtonOverridesProps = {
-    SelectButton?: PrimitiveOverrideProps<FlexProps>;
-    Button?: PrimitiveOverrideProps<FlexProps>;
-    "Get it"?: PrimitiveOverrideProps<TextProps>;
+export declare type GenerationOverridesProps = {
+    Generation?: PrimitiveOverrideProps<ViewProps>;
+    "\u5E74\u4EE3"?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
-export declare type SelectButtonProps = React.PropsWithChildren<Partial<FlexProps> & {
-    overrides?: SelectButtonOverridesProps | undefined | null;
+export declare type GenerationProps = React.PropsWithChildren<Partial<ViewProps> & {
+    overrides?: GenerationOverridesProps | undefined | null;
 }>;
-export default function SelectButton(props: SelectButtonProps): React.ReactElement;
+export default function Generation(props: GenerationProps): React.ReactElement;

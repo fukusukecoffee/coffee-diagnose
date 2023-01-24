@@ -4,12 +4,14 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
+export { default as Generation } from "./Generation";
 export { default as StartButton } from "./StartButton";
 export { default as NextButton } from "./NextButton";
 export { default as Socialmediacardframe } from "./Socialmediacardframe";
 export { default as GenderButtonCollection } from "./GenderButtonCollection";
 export { default as Qdata } from "./Qdata";
 export { default as Photo } from "./Photo";
+export { default as SelectButtonCollection } from "./SelectButtonCollection";
 export { default as ClickButton } from "./ClickButton";
 export { default as Question } from "./Question";
 export { default as Title } from "./Title";
