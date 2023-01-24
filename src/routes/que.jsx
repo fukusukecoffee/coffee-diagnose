@@ -15,6 +15,7 @@ export default function que() {
           <Container><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
         </NavbarBrand>
       </Navbar>
+      <div class="web-header">
         <div className="p-4">お名前</div>
         <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"></input>
         <div className="p-4"><Question></Question></div>
@@ -57,7 +58,7 @@ export default function que() {
       <center><div className="d-grid gap-2 col-4 mx-4"><Button className="btn-dark btn-lg">次へ</Button></div></center>
 
       </div>
-
+      </div>
       </>
     );
   }
