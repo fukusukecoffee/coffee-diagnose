@@ -2,19 +2,17 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../App.css";
 
-import {ClickButton, Generation, NameForm, NextButton, Question, Title} from '../ui-components'
+import {Back, ClickButton, Generation, NameForm, NextButton, Question, Title} from '../ui-components'
 import ComicLightlargeBase from '../ui-components/ComicLightlargeBase';
 import { Container, NavbarBrand, Navbar, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+
 
 export default function que() {
     return (
       <>
     <div className="App">
-      <Navbar className="justify-content-center">
-        <NavbarBrand>
-          <Container><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
-        </NavbarBrand>
-      </Navbar>
+      <Container className="justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
       <Container className="justify-content-center">
       <div class="web-header">
         <div className="p-4">お名前(ニックネーム)</div>
@@ -64,8 +62,10 @@ export default function que() {
               <Button className="btn-light btn-outline-dark">80代以上</Button>
             </div>
           </div>
-          <div class="p-4"></div>
+          <div class="p-2"></div>
         <center><div className="d-grid gap-2 col-4 mx-4"><Button className="btn-dark btn-lg">次へ</Button></div></center>
+        <Link to={`/`}><Back/></Link>
+      <div class="p-4"></div>
       </div>
       </Container>
     </div>

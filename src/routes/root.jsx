@@ -10,11 +10,7 @@ import { StartButton } from '../ui-components';
 export default function Root() {
     return (
     <div className="App">
-      <Navbar className="justify-content-center">
-        <NavbarBrand>
-          <Container><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
-        </NavbarBrand>
-      </Navbar>
+      <Container className="justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
       <div className="App-header">
         <Container>
             <img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/pink-cup.png" alt="coffee-cup" />
