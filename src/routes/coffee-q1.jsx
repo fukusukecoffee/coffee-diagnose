@@ -27,7 +27,7 @@ import { Link } from "react-router-dom";
       <div class="p-1"></div>
       <Button className="btn-light btn-outline-dark p-3">はい、知っています。</Button>
       <div class="p-2"></div>
-      <center><div className="d-grid gap-2"><Link to={`/coffee-q1`}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
+      <center><div className="d-grid gap-2"><Link to={`/result`}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
       <Link to={`/`}><Back/></Link>
     <div class="p-4"></div>
     </div>

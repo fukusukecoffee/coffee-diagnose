@@ -8,6 +8,7 @@ import { AmplifyProvider } from '@aws-amplify/ui-react';
 import Root from "./routes/root";
 import Que from "./routes/que";
 import CoffeeQ1 from "./routes/coffee-q1";
+import Result from "./routes/result";
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,9 @@ const router = createBrowserRouter([
   {
     path: "coffee-q1",
     element: <CoffeeQ1 />
+  },  {
+    path: "result",
+    element: <Result />
   }
 ]);
 
