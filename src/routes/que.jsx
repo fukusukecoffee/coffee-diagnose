@@ -21,45 +21,45 @@ export default function que() {
         <Container className="p-4">
           <div class="row justify-content-center" >
             <div class="col-3">
-              <Button className="btn-light btn-outline-dark">男性</Button>
+              <Button className="btn-light btn-outline-dark p-3">男性</Button>
             </div>
             <div class="col-3">
-              <Button className="btn-light btn-outline-dark">女性</Button>
+              <Button className="btn-light btn-outline-dark p-3">女性</Button>
             </div>
             <div class="col-3">
-              <Button className="btn-light btn-outline-dark">その他</Button>
+              <Button className="btn-light btn-outline-dark p-3">その他</Button>
             </div>
           </div>
         </Container>
         <div className="p-4">年代</div>
         <div class="row justify-content-center p-4" >
             <div class="col-3">
-              <Button className="btn-light btn-outline-dark">10代</Button>
+              <Button className="btn-light btn-outline-dark p-3">10代</Button>
             </div>
             <div class="col-3">
-              <Button className="btn-light btn-outline-dark">20代</Button>
+              <Button className="btn-light btn-outline-dark p-3">20代</Button>
             </div>
             <div class="col-3">
-              <Button className="btn-light btn-outline-dark">30代</Button>
-            </div>
-          </div>
-          <div class="row justify-content-center p-4" >
-            <div class="col-3">
-              <Button className="btn-light btn-outline-dark">40代</Button>
-            </div>
-            <div class="col-3">
-              <Button className="btn-light btn-outline-dark">50代</Button>
-            </div>
-            <div class="col-3">
-              <Button className="btn-light btn-outline-dark">60代</Button>
+              <Button className="btn-light btn-outline-dark p-3">30代</Button>
             </div>
           </div>
           <div class="row justify-content-center p-4" >
             <div class="col-3">
-              <Button className="btn-light btn-outline-dark">70代</Button>
+              <Button className="btn-light btn-outline-dark p-3">40代</Button>
+            </div>
+            <div class="col-3">
+              <Button className="btn-light btn-outline-dark p-3">50代</Button>
+            </div>
+            <div class="col-3">
+              <Button className="btn-light btn-outline-dark p-3">60代</Button>
+            </div>
+          </div>
+          <div class="row justify-content-center p-4" >
+            <div class="col-3">
+              <Button className="btn-light btn-outline-dark p-3">70代</Button>
             </div>
             <div class="col-4">
-              <Button className="btn-light btn-outline-dark">80代以上</Button>
+              <Button className="btn-light btn-outline-dark p-3">80代以上</Button>
             </div>
           </div>
           <div class="p-2"></div>
