@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { GetFormValue }  from '../Hook.js';
+import { GetValue }  from '../Name.js';
+import { GetGender }  from '../Gender.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../App.css";
 import {Back, ClickButton, Generation, NameForm, NextButton, Question, Title} from '../ui-components'
@@ -9,16 +10,19 @@ import { Link } from "react-router-dom";
 import { renderHook } from '@testing-library/react';
 
 export default function que() {
-  const text = GetFormValue();
+  const form = GetValue();
+  const gender = GetGender();
   return (
     <>
   <div className="App">
     <Container className="justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
     <Container className="justify-content-center">
     <div class="web-header">
-      {text}
-      <div className="p-4">性別</div>
-      <Container className="p-4">
+      { form }
+      { gender }
+      {/* <p>{text}</p> */}
+      {/* <div className="p-4">性別</div> */}
+      {/* <Container className="p-4">
         <div class="row justify-content-center" >
           <div class="col-3">
             <Button className="btn-light btn-outline-dark p-3">男性</Button>
@@ -30,7 +34,7 @@ export default function que() {
             <Button className="btn-light btn-outline-dark p-3">その他</Button>
           </div>
         </div>
-      </Container>
+      </Container> */}
       <div className="p-4">年代</div>
       <div class="row justify-content-center p-4" >
           <div class="col-3">
