@@ -12,29 +12,25 @@ import { renderHook } from '@testing-library/react';
 export default function que() {
   const form = GetValue();
   const gender = GetGender();
+  const formValue = form.props.children.props.value
+  const sessionValues = [];
+  // スプレッド構文
+  const addSessionValues = [...sessionValues,formValue];
+
   return (
     <>
   <div className="App">
     <Container className="justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
     <Container className="justify-content-center">
     <div class="web-header">
+      <div className="p-4">お名前(ニックネーム)</div>
       { form }
-      { gender }
-      {/* <p>{text}</p> */}
-      {/* <div className="p-4">性別</div> */}
-      {/* <Container className="p-4">
-        <div class="row justify-content-center" >
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">男性</Button>
+      <div className="p-4">性別</div>
+        <Container className="p-4">
+          <div class="row justify-content-center" >
+            { gender }
           </div>
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">女性</Button>
-          </div>
-          <div class="col-3">
-            <Button className="btn-light btn-outline-dark p-3">その他</Button>
-          </div>
-        </div>
-      </Container> */}
+        </Container>
       <div className="p-4">年代</div>
       <div class="row justify-content-center p-4" >
           <div class="col-3">
