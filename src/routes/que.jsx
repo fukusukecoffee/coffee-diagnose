@@ -16,6 +16,7 @@ export default function que() {
   const sessionValues = [];
   // スプレッド構文
   const addSessionValues = [...sessionValues,formValue];
+  // console.log(addSessionValues)
 
   return (
     <>
@@ -63,7 +64,7 @@ export default function que() {
           </div>
         </div>
         <div class="p-2"></div>
-      <center><div className="d-grid gap-2"><Link to={`/coffee-q1`}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
+      <center><div className="d-grid gap-2"><Link to={`/coffee-q1`} state={{ state: addSessionValues }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
       <Link to={`/`}><Back/></Link>
     <div class="p-4"></div>
     </div>

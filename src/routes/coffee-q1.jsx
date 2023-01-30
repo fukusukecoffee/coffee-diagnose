@@ -1,4 +1,6 @@
 import React from 'react';
+import que  from './que.jsx';
+import { useLocation } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../App.css";
 
@@ -9,6 +11,9 @@ import { Link } from "react-router-dom";
 
 
   export default function CoffeeQ1() {
+    const location = useLocation();
+    const passData = location.state.state
+    console.log(passData)
     return (
     <>
   <div className="App">
