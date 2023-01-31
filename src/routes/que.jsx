@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { GetValue }  from '../Name.js';
-import { GetGender }  from '../Gender.js';
+import { GetGender, onClick }  from '../Gender.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../App.css";
 import {Back, ClickButton, Generation, NameForm, NextButton, Question, Title} from '../ui-components'
@@ -11,12 +11,22 @@ import { renderHook } from '@testing-library/react';
 
 export default function que() {
   const form = GetValue();
-  const gender = GetGender();
+  const getGender = GetGender();
+  console.log(GetGender().onClick);
+  // console.log(eventNum)
+  // const genderValue = getGender.props.children[0].key
+  // const hoge = getGender.props.children
+  // // console.log(hoge)
+  // const genderValues =
+  //   hoge.map((i) => {
+  //     // return `${i.key}番目です`
+  //     return getGender.props.children[i.key].key
+  //   })
+  //   console.log(genderValues)
   const formValue = form.props.children.props.value
-  const sessionValues = [];
+  const queValue = [];
   // スプレッド構文
-  const addSessionValues = [...sessionValues,formValue];
-  // console.log(addSessionValues)
+  const addQueValue = [...queValue,formValue];
 
   return (
     <>
@@ -29,7 +39,7 @@ export default function que() {
       <div className="p-4">性別</div>
         <Container className="p-4">
           <div class="row justify-content-center" >
-            { gender }
+            { getGender }
           </div>
         </Container>
       <div className="p-4">年代</div>
@@ -64,7 +74,7 @@ export default function que() {
           </div>
         </div>
         <div class="p-2"></div>
-      <center><div className="d-grid gap-2"><Link to={`/coffee-q1`} state={{ state: addSessionValues }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
+      <center><div className="d-grid gap-2"><Link to={`/coffee-q1`} state={{ state: addQueValue }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
       <Link to={`/`}><Back/></Link>
     <div class="p-4"></div>
     </div>

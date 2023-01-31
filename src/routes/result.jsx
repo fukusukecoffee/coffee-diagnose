@@ -1,14 +1,19 @@
 import React from 'react';
+import que  from './que.jsx';
+import CoffeeQ1  from './coffee-q1';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../App.css";
 
 import {AnswerButtonCollection, Back, ClickButton, Generation, NameForm, NextButton, Question, Title} from '../ui-components'
 import ComicLightlargeBase from '../ui-components/ComicLightlargeBase';
 import { Container, NavbarBrand, Navbar, Button } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
   export default function Result() {
+    const locationSecond = useLocation();
+    const result = locationSecond.state.state
+    console.log(result)
     return (
     <>
   <div className="App">
