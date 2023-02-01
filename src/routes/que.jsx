@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { GetValue }  from '../Name.js';
-import { GetGender, onClick }  from '../Gender.js';
+import { GetGender }  from '../Gender.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../App.css";
 import {Back, ClickButton, Generation, NameForm, NextButton, Question, Title} from '../ui-components'
@@ -12,22 +12,12 @@ import { renderHook } from '@testing-library/react';
 export default function que() {
   const form = GetValue();
   const getGender = GetGender();
-  console.log(GetGender().onClick);
-  // console.log(eventNum)
-  // const genderValue = getGender.props.children[0].key
-  // const hoge = getGender.props.children
-  // // console.log(hoge)
-  // const genderValues =
-  //   hoge.map((i) => {
-  //     // return `${i.key}番目です`
-  //     return getGender.props.children[i.key].key
-  //   })
-  //   console.log(genderValues)
+  const id = document.getElementById("gender_value")
+  console.log(id)
   const formValue = form.props.children.props.value
   const queValue = [];
   // スプレッド構文
   const addQueValue = [...queValue,formValue];
-
   return (
     <>
   <div className="App">
@@ -38,9 +28,9 @@ export default function que() {
       { form }
       <div className="p-4">性別</div>
         <Container className="p-4">
-          <div class="row justify-content-center" >
+        <div class="row justify-content-center" >
             { getGender }
-          </div>
+        </div>
         </Container>
       <div className="p-4">年代</div>
       <div class="row justify-content-center p-4" >
