@@ -9,7 +9,7 @@ import Root from "./routes/root";
 import Que from "./routes/que";
 import CoffeeQ1 from "./routes/coffee-q1";
 import Result from "./routes/result";
-
+import Loading from "./routes/loading";
 
 const router = createBrowserRouter([
   {
@@ -23,10 +23,15 @@ const router = createBrowserRouter([
   {
     path: "coffee-q1",
     element: <CoffeeQ1 />
-  },  {
+  },
+  {
     path: "result",
     element: <Result />
-  }
+  },
+  {
+    path: "loading",
+    element: <Loading />
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
