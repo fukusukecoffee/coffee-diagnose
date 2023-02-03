@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 import { GetValue }  from '../Name.js';
 import { GetGender }  from '../Gender.js';
+import { GetAge }  from '../Age.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../App.css";
 import {Back, ClickButton, Generation, NameForm, NextButton, Question, Title} from '../ui-components'
@@ -12,6 +14,8 @@ import { renderHook } from '@testing-library/react';
 export default function que() {
   const form = GetValue();
   const getGender = GetGender();
+  const getAge = GetAge();
+  // console.log(getAge)
   const genderId = getGender.props.children[1].props.value
   const formValue = form.props.children.props.value
   const queValue = [];
@@ -33,6 +37,7 @@ export default function que() {
         </Container>
       <div className="p-4">年代</div>
       <div class="row justify-content-center p-4" >
+        {/* { getAge } */}
           <div class="col-3">
             <Button className="btn-light btn-outline-dark p-3">10代</Button>
           </div>

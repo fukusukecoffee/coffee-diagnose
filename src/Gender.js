@@ -1,4 +1,5 @@
 import  { useState, useRef } from "react";
+import { useForm } from 'react-hook-form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 import { Button } from 'react-bootstrap';
@@ -13,8 +14,8 @@ export function GetGender() {
   const [gender, setGender] = useState('');
   return (
     <>
-      {genders.map((gen, index) => (
-        <div className="col-3" key={ index }>
+      {genders.map((gen, i) => (
+        <div className="col-3" key={ i }>
           <Button onClick={(e) => setGender(e.currentTarget.value)}  value={ gen.id } className="btn-light btn-outline-dark p-3">
             {gen.name}
           </Button>
