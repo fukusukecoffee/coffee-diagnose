@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GetValue }  from '../Name.js';
 import { GetGender }  from '../Gender.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,12 +12,11 @@ import { renderHook } from '@testing-library/react';
 export default function que() {
   const form = GetValue();
   const getGender = GetGender();
-  const id = document.getElementById("gender_value")
-  console.log(id)
+  const genderId = getGender.props.children[1].props.value
   const formValue = form.props.children.props.value
   const queValue = [];
   // スプレッド構文
-  const addQueValue = [...queValue,formValue];
+  const addQueValue = [...queValue, formValue, genderId];
   return (
     <>
   <div className="App">

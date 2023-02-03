@@ -14,6 +14,7 @@ import { Link, useLocation } from "react-router-dom";
     const passData = location.state.state
     const q1Value = [];
     const addQ1Value = [...q1Value,passData];
+    console.log(addQ1Value)
     return (
     <>
   <div className="App">
