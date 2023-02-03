@@ -4,6 +4,9 @@ import { Container, NavbarBrand, Navbar, Button } from 'react-bootstrap';
 
 export default function App() {
   return (
+    <Container>
+      <Container className="d-flex justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
+      <h3 class="d-flex justify-content-center p-4">Loading...</h3>
       <div id="box">
           <motion.div
             className="box"
@@ -21,5 +24,6 @@ export default function App() {
             }}
           /> 
       </div>
+    </Container>
   );
 }

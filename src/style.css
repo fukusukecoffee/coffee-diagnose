@@ -3,17 +3,17 @@
     --ash-black: #222;
     --white: #fafafa;
     --sky: #00ccff;
-    --green: #22dddd;
+    --green: #bab100    ;
     --blue: #1300ff;
     --dusk: #6600ff;
     --purple: #9900ff;
-    --pink: #ff0066;
+    --pink: #f1cac5    ;
     --red: #fe0222;
-    --orange: #fd7702;
+    --orange: #e07f00    ;
     --yellow: #ffbb00;
   
     --background: var(--orange);
-    --accent: var(--yellow);
+    --accent: var(--pink);
   
     margin: 0;
     padding: 0;
