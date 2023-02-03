@@ -9,7 +9,7 @@ question string
 image string
 
 Answer - belongs_to question
-answer string 
+answer string
 
 # Getting Started with Create React App
 
