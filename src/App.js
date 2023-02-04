@@ -23,7 +23,12 @@ const router = createBrowserRouter([
   {
     path: "coffee-q1",
     element: <CoffeeQ1 />
-  },  {
+  },
+  {
+    path: "coffee-q1-1",
+    element: <CoffeeQ1-1 />
+  },
+  {
     path: "result",
     element: <Result />
   }
