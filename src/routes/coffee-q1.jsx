@@ -22,17 +22,13 @@ import { Link, useLocation } from "react-router-dom";
     <Container className="justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
     <Container className="justify-content-center">
     <div class="web-header">
-      <div className="p-4">質問：スペシャルティコーヒーを知っていますか？</div>
+      <div className="p-4">質問：コーヒーは好きですか？</div>
       <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/social-media-card-frame-1.png" alt="specialty-coffee" width="200px" /></center>
       <div class="p-2"></div>
-      <Button className="btn-light btn-outline-dark p-3">はい、知っています。</Button>
+      <Button className="btn-light btn-outline-dark p-3">好き</Button>
       <div class="p-1"></div>
-      <Button className="btn-light btn-outline-dark p-3">はい、知っています。</Button>
+      <Button className="btn-light btn-outline-dark p-3">嫌い</Button>
       <div class="p-1"></div>
-
-      <Button className="btn-light btn-outline-dark p-3">はい、知っています。</Button>
-      <div class="p-1"></div>
-      <Button className="btn-light btn-outline-dark p-3">はい、知っています。</Button>
       <div class="p-2"></div>
       <center><div className="d-grid gap-2"><Link to={`/result`} state={{ state: addQ1Value }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
       <Link to={`/`}><Back/></Link>
