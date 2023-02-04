@@ -21,7 +21,7 @@ import { Link, useLocation } from "react-router-dom";
     <Container className="justify-content-center">
     <div className="web-header">
       <div className="p-4">質問：なぜコーヒーが好きですか？</div>
-      <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/social-media-card-frame-1.png" alt="specialty-coffee" width="200px" /></center>
+      <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/02/q11.png" alt="specialty-coffee" width="200px" /></center>
       <div className="p-2"></div>
       <Button className="btn-light btn-outline-dark p-3">リラックスできるから</Button>
       <div className="p-1"></div>

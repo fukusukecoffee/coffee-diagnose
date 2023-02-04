@@ -23,7 +23,7 @@ import { Link, useLocation } from "react-router-dom";
     <Container className="justify-content-center">
     <div class="web-header">
       <div className="p-4">質問：どんな味わいが好きですか？</div>
-      <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/social-media-card-frame-1.png" alt="specialty-coffee" width="200px" /></center>
+      <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/02/q41.png" alt="specialty-coffee" width="200px" /></center>
       <div class="p-2"></div>
       <Button className="btn-light btn-outline-dark p-3">バランスが良くてマイルド</Button>
       <div class="p-1"></div>
