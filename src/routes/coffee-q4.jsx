@@ -11,11 +11,11 @@ import { Link, useLocation } from "react-router-dom";
 
 
   export default function CoffeeQ4() {
-    const location = useLocation();
-    const passData = location.state.state
-    const q1Value = [];
-    const addQ1Value = [...q1Value,passData];
-    console.log(addQ1Value)
+    // const location = useLocation();
+    // const passData = location.state.state
+    // const q1Value = [];
+    // const addQ1Value = [...q1Value,passData];
+    // console.log(addQ1Value)
     return (
     <>
   <div className="App">
@@ -25,12 +25,16 @@ import { Link, useLocation } from "react-router-dom";
       <div className="p-4">質問：スペシャルティコーヒーを知っていますか？</div>
       <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/social-media-card-frame-1.png" alt="specialty-coffee" width="200px" /></center>
       <div class="p-2"></div>
-      <Button className="btn-light btn-outline-dark p-3">好き</Button>
+      <Button className="btn-light btn-outline-dark p-3">はい、よく飲みます</Button>
       <div class="p-1"></div>
-      <Button className="btn-light btn-outline-dark p-3">嫌い</Button>
+      <Button className="btn-light btn-outline-dark p-3">はい、飲んだことはあります</Button>
+      <div class="p-1"></div>
+      <Button className="btn-light btn-outline-dark p-3">はい、聞いたことはあります</Button>
+      <div class="p-1"></div>
+      <Button className="btn-light btn-outline-dark p-3">いいえ、知りません</Button>
       <div class="p-1"></div>
       <div class="p-2"></div>
-      <center><div className="d-grid gap-2"><Link to={`/result`} state={{ state: addQ1Value }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center>
+      {/* <center><div className="d-grid gap-2"><Link to={`/result`} state={{ state: addQ1Value }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center> */}
       <Link to={`/`}><Back/></Link>
     <div class="p-4"></div>
     </div>
