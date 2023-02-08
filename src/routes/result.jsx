@@ -20,23 +20,38 @@ import { Link, useLocation } from "react-router-dom";
   <div className="App">
     <Container className="justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
     <Container className="justify-content-center">
-    <div class="web-header">
-      <div className="p-4">さくらさんにぴったりなコーヒー豆は・・・</div>
-      <center><img src="https://fukusukecoffee.com/wp-content/uploads/2022/12/2-1.png" alt="fukusukeblend" width="400px" /></center>
-      <div className="p-2"></div>
-      <Container fluid className="lh-1">
-      <p>定番ブレンド</p>
-      <h4>『FUKUSUKE BLEND』</h4>
-      <div className="p-2"></div>
-      <p>ナッツやチョコレートのような風味に</p><p>ハーブのような清涼感。</p>
-      <p>冷めると柑橘のような果実の風味を感じます。</p>
-      Taste note : Chocolate, Herbal, Orange
+      <Container fluid className="p-4">
+        <p>さくらさんにぴったりなコーヒー豆は・・・</p>
+        <center><img src="https://fukusukecoffee.com/wp-content/uploads/2022/12/2-1.png" alt="fukusukeblend" width="400px" /></center>
+        <div className="p-2"></div>
+        <Container fluid className="lh-1">
+          <p>定番ブレンド</p>
+          <b className="fs-3">FUKUSUKE BLEND</b>
+          <div className="p-2"></div>
+          <p>ナッツやチョコレートのような風味にハーブのような清涼感。</p>
+          <p>冷めると柑橘のような果実の風味を感じます。</p>
+          <div className="p-2"></div>
+          <p>Taste note : Chocolate, Herbal, Orange</p>
+        </Container>
+        <div className="p-2"></div>
+        <center><div className="d-grid gap-2"><a href ="https://fukusukecoffee.com/product/fukusuke-blend"><Button className="btn-dark">購入する</Button></a></div></center>
       </Container>
-      <div className="p-2"></div>
-      <center><div className="d-grid gap-2"><a href ="https://fukusukecoffee.com/product/fukusuke-blend"><Button className="btn-dark btn-lg">くわしく見る</Button></a></div></center>
-      <Container className="justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/pink-cup.png" height="100"></img></Container>
-      <b>＼あなたにおすすめのセットはこちら／</b>
-    </div>
+      <Container className="bg-light">
+        <Container className="justify-content-center p-4"><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/pink-cup.png" height="100"></img></Container>
+        <b>＼あなたにおすすめのセット／</b>
+        <div className="justify-content-center p-4"><img class="img-fluid" src="https://fukusukecoffee.com/wp-content/uploads/2023/02/DEF3728-scaled.jpg"></img></div>
+        <Container fluid className="lh-1 pb-4">
+          <b className="fs-3">BLEND 3種セット</b>
+          <div className="p-2"></div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item p-3">FUKUSUKE BLEND (100g)</li>
+            <li class="list-group-item p-3">SAKURAI BLEND (100g)</li>
+            <li class="list-group-item p-3">TENJIN BLEND (100g)</li>
+          </ul>
+          <div className="p-2"></div>
+          <center><div className="d-grid gap-2"><a href ="https://fukusukecoffee.com/product/fukusuke-blend"><Button className="btn-light btn-outline-dark">３種セットを購入する</Button></a></div></center>
+        </Container>
+      </Container>
     </Container>
   </div>
     </>
