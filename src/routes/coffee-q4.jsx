@@ -25,13 +25,13 @@ import { Link, useLocation } from "react-router-dom";
       <div className="p-4">質問：スペシャルティコーヒーを知っていますか？</div>
       <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/social-media-card-frame-1.png" alt="specialty-coffee" width="200px" /></center>
       <div class="p-2"></div>
-      <Link to="../coffee-q4_1"><Button className="btn-light btn-outline-dark p-3">はい、よく飲みます</Button></Link>
+      <Link to="../coffee-q4_1" className="btn btn-light btn-outline-dark p-3">はい、よく飲みます</Link>
       <div class="p-1"></div>
-      <Link to="../coffee-q4_1"><Button className="btn-light btn-outline-dark p-3">はい、飲んだことはあります</Button></Link>
+      <Link to="../coffee-q4_1" className="btn btn-light btn-outline-dark p-3">はい、飲んだことはあります</Link>
       <div class="p-1"></div>
-      <Link to="../coffee-q4_2"><Button className="btn-light btn-outline-dark p-3">はい、聞いたことはあります</Button></Link>
+      <Link to="../coffee-q4_1" className="btn btn-light btn-outline-dark p-3">はい、聞いたことはあります</Link>
       <div class="p-1"></div>
-      <Link to="../coffee-q4_2"><Button className="btn-light btn-outline-dark p-3">いいえ、知りません</Button></Link>
+      <Link to="../coffee-q4_1" className="btn btn-light btn-outline-dark p-3">いいえ、知りません</Link>
       <div class="p-1"></div>
       <div class="p-2"></div>
       {/* <center><div className="d-grid gap-2"><Link to={`/result`} state={{ state: addQ1Value }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center> */}

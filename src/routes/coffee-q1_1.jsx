@@ -23,13 +23,13 @@ import { Link, useLocation } from "react-router-dom";
       <div className="p-4">質問：なぜコーヒーが好きですか？</div>
       <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/02/q11.png" alt="specialty-coffee" width="200px" /></center>
       <div className="p-2"></div>
-      <Link to="../coffee-q2"><Button className="btn-light btn-outline-dark p-3">リラックスできるから</Button></Link>
+      <Link to="../coffee-q2" className="btn btn-light btn-outline-dark p-3">リラックスできるから</Link>
       <div className="p-1"></div>
-      <Link to="../coffee-q2"><Button className="btn-light btn-outline-dark p-3">家族や友達との時間を楽しめるから</Button></Link>
+      <Link to="../coffee-q2" className="btn btn-light btn-outline-dark p-3">家族や友達との時間を楽しめるから</Link>
       <div className="p-1"></div>
-      <Link to="../coffee-q2"><Button className="btn-light btn-outline-dark p-3">こだわりの時間を過ごせるから</Button></Link>
+      <Link to="../coffee-q2" className="btn btn-light btn-outline-dark p-3">こだわりの時間を過ごせるから</Link>
       <div className="p-1"></div>
-      <Link to="../coffee-q2"><Button className="btn-light btn-outline-dark p-3">集中できるから</Button></Link>
+      <Link to="../coffee-q2" className="btn btn-light btn-outline-dark p-3">集中できるから</Link>
       <div className="p-2"></div>
       {/* <center><div className="d-grid gap-2"><Link to={`/result`} state={{ state: addQ1Value }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center> */}
       <Link to={`/`}><Back/></Link>

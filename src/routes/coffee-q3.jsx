@@ -25,11 +25,11 @@ import { Link, useLocation } from "react-router-dom";
       <div className="p-4">質問：コーヒーはどれくらい飲みますか？</div>
       <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/02/q3.png" alt="specialty-coffee" width="200px" /></center>
       <div class="p-2"></div>
-      <Link to="../coffee-q4"><Button className="btn-light btn-outline-dark p-3">毎日飲みます</Button></Link>
+      <Link to="../coffee-q4" className="btn btn-light btn-outline-dark p-3">毎日飲みます</Link>
       <div class="p-1"></div>
-      <Link to="../coffee-q4"><Button className="btn-light btn-outline-dark p-3">週に数回飲みます</Button></Link>
+      <Link to="../coffee-q4" className="btn btn-light btn-outline-dark p-3">週に数回飲みます</Link>
       <div class="p-1"></div>
-      <Link to="../coffee-q4"><Button className="btn-light btn-outline-dark p-3">あまり飲みません</Button></Link>
+      <Link to="../coffee-q4" className="btn btn-light btn-outline-dark p-3">あまり飲みません</Link>
       <div class="p-2"></div>
       {/* <center><div className="d-grid gap-2"><Link to={`/result`} state={{ state: addQ1Value }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center> */}
       <Link to={`/`}><Back/></Link>
