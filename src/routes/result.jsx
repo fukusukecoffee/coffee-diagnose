@@ -34,7 +34,7 @@ import { Link, useLocation } from "react-router-dom";
           <p>Taste note : Chocolate, Herbal, Orange</p>
         </Container>
         <div className="p-2"></div>
-        <center><div className="d-grid gap-2"><a href ="https://fukusukecoffee.com/product/fukusuke-blend"><Button className="btn-dark">購入する</Button></a></div></center>
+        <center><a href ="https://fukusukecoffee.com/product/fukusuke-blend" className="btn btn-dark px-5">購入する</a></center>
       </div>
       <div className="bg-light container-sm">
         <Container className="justify-content-center p-4"><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/pink-cup.png" height="100"></img></Container>
