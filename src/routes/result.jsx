@@ -21,7 +21,7 @@ import { Link, useLocation } from "react-router-dom";
     <Container className="justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
     <div className="justify-content-center">
       <div className="container-sm p-4">
-        <p>さくらさんにぴったりなコーヒー豆は・・・</p>
+        <p>あなたにぴったりなコーヒー豆は・・・</p>
         <center><img src="https://fukusukecoffee.com/wp-content/uploads/2022/12/2-1.png" alt="fukusukeblend" width="400px" /></center>
         <div className="p-2"></div>
         <Container fluid className="lh-1">
