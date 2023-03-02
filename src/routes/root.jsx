@@ -15,7 +15,7 @@ export default function Root() {
         <Container>
             <img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/pink-cup.png" alt="coffee-cup" />
             <div className="p-4"><center><Title /></center></div>
-            <Link to={`que`}><center><StartButton/></center></Link>
+            <Link to={`coffee-q1`}><center><StartButton/></center></Link>
         </Container>
         </div>
     </div>
