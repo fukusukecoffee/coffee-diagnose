@@ -19,8 +19,8 @@ import { Link, useLocation } from "react-router-dom";
     <>
   <div className="App">
     <Container className="justify-content-center"><img src="https://fukusukecoffee.com/wp-content/uploads/2022/08/fukusukecoffee-11-1.png" height="15"></img></Container>
-    <Container className="justify-content-center">
-      <Container fluid className="p-4">
+    <div className="justify-content-center">
+      <div className="container-sm p-4">
         <p>さくらさんにぴったりなコーヒー豆は・・・</p>
         <center><img src="https://fukusukecoffee.com/wp-content/uploads/2022/12/2-1.png" alt="fukusukeblend" width="400px" /></center>
         <div className="p-2"></div>
@@ -35,12 +35,12 @@ import { Link, useLocation } from "react-router-dom";
         </Container>
         <div className="p-2"></div>
         <center><div className="d-grid gap-2"><a href ="https://fukusukecoffee.com/product/fukusuke-blend"><Button className="btn-dark">購入する</Button></a></div></center>
-      </Container>
-      <Container className="bg-light">
+      </div>
+      <div className="bg-light container-sm">
         <Container className="justify-content-center p-4"><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/pink-cup.png" height="100"></img></Container>
         <b>＼あなたにおすすめのセット／</b>
         <div className="justify-content-center p-4"><img class="img-fluid" src="https://fukusukecoffee.com/wp-content/uploads/2023/02/DEF3728-scaled.jpg"></img></div>
-        <Container fluid className="lh-1 pb-4">
+        <Container className="lh-1 pb-4">
           <b className="fs-3">BLEND 3種セット</b>
           <div className="p-2"></div>
           <ul class="list-group list-group-flush">
@@ -51,8 +51,8 @@ import { Link, useLocation } from "react-router-dom";
           <div className="p-2"></div>
           <center><div className="d-grid gap-2"><a href ="https://fukusukecoffee.com/product/fukusuke-blend"><Button className="btn-light btn-outline-dark">３種セットを購入する</Button></a></div></center>
         </Container>
-      </Container>
-    </Container>
+      </div>
+    </div>
   </div>
     </>
   );
