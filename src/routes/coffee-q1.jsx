@@ -25,9 +25,9 @@ import { Link, useLocation } from "react-router-dom";
       <div className="p-4">質問：コーヒーは好きですか？</div>
       <center><img src="https://fukusukecoffee.com/wp-content/uploads/2023/02/q1.png" alt="specialty-coffee" width="200px" /></center>
       <div class="p-2"></div>
-      <Button className="btn-light btn-outline-dark p-3">好き</Button>
+      <Link to="../coffee-q1_1"><Button className="btn-light btn-outline-dark p-3">好き</Button></Link>
       <div class="p-1"></div>
-      <Button className="btn-light btn-outline-dark p-3">嫌い</Button>
+      <Link to="../coffee-q1_2"><Button className="btn-light btn-outline-dark p-3">嫌い</Button></Link>
       <div class="p-1"></div>
       <div class="p-2"></div>
       {/* <center><div className="d-grid gap-2"><Link to={`/result`} state={{ state: addQ1Value }}><Button className="btn-dark btn-lg">次へ</Button></Link></div></center> */}
