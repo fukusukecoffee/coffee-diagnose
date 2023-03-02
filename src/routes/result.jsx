@@ -26,7 +26,7 @@ import { Link, useLocation } from "react-router-dom";
       <div class="p-2"></div>
       <center><img src="https://fukusukecoffee.com/wp-content/uploads/2022/12/2-1.png" alt="fukusukeblend" width="400px" /></center>
       <div class="p-2"></div>
-      <center><div className="d-grid gap-2"><Link to={`/coffee-q1`}><Button className="btn-dark btn-lg">購入する</Button></Link></div></center>
+      <center><div className="d-grid gap-2"><Button className="btn-dark btn-lg">購入する</Button></div></center>
       <Link to={`/`}><Back/></Link>
     <div class="p-4"></div>
     </div>
