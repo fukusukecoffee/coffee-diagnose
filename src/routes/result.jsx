@@ -36,7 +36,7 @@ import { Link, useLocation } from "react-router-dom";
         <div className="p-2"></div>
         <center><a href ="https://fukusukecoffee.com/product/fukusuke-blend" className="btn btn-dark px-5">購入する</a></center>
       </div>
-      <div className="bg-light container-sm">
+      {/* <div className="bg-light container-sm">
         <Container className="justify-content-center p-4"><img src="https://fukusukecoffee.com/wp-content/uploads/2023/01/pink-cup.png" height="100"></img></Container>
         <b>＼あなたにおすすめのセット／</b>
         <div className="justify-content-center p-4"><img class="img-fluid" src="https://fukusukecoffee.com/wp-content/uploads/2023/02/DEF3728-scaled.jpg"></img></div>
@@ -51,7 +51,7 @@ import { Link, useLocation } from "react-router-dom";
           <div className="p-2"></div>
           <center><div className="d-grid gap-2"><a href ="https://fukusukecoffee.com/product/fukusuke-blend"><Button className="btn-light btn-outline-dark">３種セットを購入する</Button></a></div></center>
         </Container>
-      </div>
+      </div> */}
     </div>
   </div>
     </>
